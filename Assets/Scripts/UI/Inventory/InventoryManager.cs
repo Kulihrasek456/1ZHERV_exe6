@@ -441,7 +441,7 @@ public class InventoryManager : MonoBehaviour
             if(availableCurrency<selectedItem.definition.cost){
                 return false;
             }else{
-                availableCurrency-=selectedItem.definition.cost;
+                SetAvailableCurrency(availableCurrency-selectedItem.definition.cost);
             }
             
         }else{

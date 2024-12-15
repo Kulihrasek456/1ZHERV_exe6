@@ -171,7 +171,7 @@ public class GameManager : MonoBehaviour
         Debug.LogWarning("The game stopped itself");
         UnityEditor.EditorApplication.isPlaying = false;
 #elif UNITY_WEBPLAYER
-        Application.OpenURL("about:blank");
+        Application.ExternalEval("location.reload();");
 #else // !UNITY_WEBPLAYER
         Application.Quit(); 
 #endif
